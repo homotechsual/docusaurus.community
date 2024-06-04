@@ -26,6 +26,12 @@ import CardHeader from '@site/src/components/SimpleCard/CardHeader';
 import CardImage from '@site/src/components/SimpleCard/CardImage';
 import Timeline from '@site/src/components/Timeline';
 import TimelineItem from '@site/src/components/Timeline/TimelineItem';
+import AvatarContainer from '@site/src/components/Avatar/AvatarContainer';
+import AvatarImage from '@site/src/components/Avatar/AvatarImage';
+import AvatarIntro from '@site/src/components/Avatar/AvatarIntro';
+import AvatarName from '@site/src/components/Avatar/AvatarName';
+import AvatarSubtitle from '@site/src/components/Avatar/AvatarSubtitle';
+
 
 library.add(fab, fas);
 
@@ -48,4 +54,9 @@ export default {
     CardImage,
     Timeline,
     TimelineItem,
+    AvatarContainer, 
+    AvatarImage,
+    AvatarIntro,
+    AvatarName,
+    AvatarSubtitle,
 };

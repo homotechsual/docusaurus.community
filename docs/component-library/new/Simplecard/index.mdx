@@ -39,29 +39,29 @@ Creating the file and adding the source code for the component.
 <Tabs groupId="js-ts">
   <TabItem value="js" label="JS">
 
-```javascript title='\src\components\SimpleCard\Card\index.js'
-import React,  { CSSProperties } from 'react'; // CSSProperties allows inline styling with better type checking.
-import clsx from 'clsx'; // clsx helps manage conditional className names in a clean and concise manner.
+```javascript title='\src\components\Avatar\AvatarContainer\index.js'
+import React,  { CSSProperties } from 'react';
+import clsx from 'clsx'; // Assurez-vous d'avoir clsx installé et importé correctement
 
 
-
-const Card = ({
-  className, // classNamees for the container card
-  style, // Custom styles for the container card
-  children,  // for include others parts in
-  shadow,  // for add shadow under your card Shadow levels: low (lw), medium (md), top-level (tl)
-}) => {
-  const cardShadow = shadow ? `item shadow--${shadow}` :'';
+const AvatarContainer = ({
+  className, // Classes personnalisées pour le composant
+  style, // Styles personnalisés pour le composant
+  children, // Contenu du composant
+  vertical = false, 
+}) => {   
+  const avatarPosition = vertical ? `avatar--vertical` :'';
   return (
-    <div className="card-demo">
-    <div className={clsx("card", className, cardShadow)} style={style}>
+    <div className={clsx("avatar", className, avatarPosition)} style={style}>
+   
     {children}
-  </div></div>
+  </div>
   );
-};
+}
 
 
-export default  Card;
+export default AvatarContainer ;
+  
 ```
 
 </TabItem>
