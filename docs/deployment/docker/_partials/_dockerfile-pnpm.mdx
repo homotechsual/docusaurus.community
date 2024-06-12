@@ -36,7 +36,7 @@ FROM prod as serve
 ## Expose the port that Docusaurus will run on.
 EXPOSE 3000
 ## Run the production server.
-CMD ["pnpm", "serve", "--host", "--", "0.0.0.0", "--no-open"]
+CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
 FROM caddy:2-alpine as caddy
